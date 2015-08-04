@@ -25,7 +25,7 @@ Install as any other Laravel 4 package:
 
 	    ...
 
-	    'marcha\Image\Providers\Laravel\ImageServiceProvider'
+	    'KevBaldwyn\Image\Providers\Laravel\ImageServiceProvider'
 	)
 
 4) Add to the facades array in app.php:
@@ -34,12 +34,12 @@ Install as any other Laravel 4 package:
 
 	    ...
 
-	    'Image' => 'marcha\Image\Providers\Laravel\Facades\Image'
+	    'Image' => 'KevBaldwyn\Image\Providers\Laravel\Facades\Image'
 	)
 
 5) Publish the package config file to change the defaults:
 
-    $ php artisan config:publish marcha/image
+    $ php artisan config:publish kevbaldwyn/image
 
 6) Copy the /vendor/imagecow/imagecow/Imagecow/Imagecow.js file to a publicly accessible web directory. The default path is set as /public/js/Imagecow.js, but whatever it is set as in the config the file must exist.
 
