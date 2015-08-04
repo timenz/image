@@ -5,9 +5,11 @@
     "authors": [
         {
             "name": "Kevin Baldwyn",
-            "email": "kevin@purepixel.co.uk",
+            "email": "kevin@purepixel.co.uk"
+        },
+        {
             "name" : "Nikola Janković",
-            "email": "nikola@mojasoba.com",
+            "email": "nikola@mojasoba.com"
         }
     ],
     "require": {
