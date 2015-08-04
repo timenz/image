@@ -26,6 +26,7 @@ class ImageServiceProvider extends ServiceProvider {
         ]);
 	}
 
+
 	/**
 	 * Register the service provider.
 	 *
