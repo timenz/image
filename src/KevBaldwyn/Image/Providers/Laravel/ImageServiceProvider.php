@@ -18,8 +18,12 @@ class ImageServiceProvider extends ServiceProvider {
 	protected $defer = false;
 
 	public function boot() {
-		
-		include(__DIR__.'/routes.php');
+
+        require __DIR__.'/routes.php';
+
+        $this->publishes([
+            __DIR__.'/../../../../config/config.php' => config_path('image.php'),
+        ]);
 	}
 
 	/**
@@ -29,8 +33,9 @@ class ImageServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		
-		Config::package('kevbaldwyn/image', __DIR__.'/../../../../../config');
+
+        // Config::package('kevbaldwyn/image', __DIR__.'/../../../../../config');
+		// config('kevbaldwyn/image', __DIR__.'/../../../../config');
 
 		$this->registerCache();
 		$this->registerImageFileSaveHandler();
@@ -48,9 +53,10 @@ class ImageServiceProvider extends ServiceProvider {
             // trying to keep image cache separate from other cache
             $config = array();
             $config['config']['cache.driver'] = 'file';
-            $config['config']['cache.path'] = storage_path() . '/cache/' . Config::get('image::cache.path');
+            $config['config']['cache.path'] = storage_path() . '/cache/' . Config::get('image.cache.path');
             $config['files'] = new \Illuminate\Filesystem\Filesystem;
-            return new \Illuminate\Cache\CacheManager($config);
+            // return new \Illuminate\Cache\CacheManager($config);
+            return new \Illuminate\Cache\CacheManager($this->app);
 		});
 
 	}
@@ -76,8 +82,8 @@ class ImageServiceProvider extends ServiceProvider {
 			// option 2
 			// $cacher   = new ImageFileCacher($app['kevbaldwyn.image.saveHandler']);
 			return new Image($provider,
-							 Config::get('image::cache.lifetime'),
-							 Config::get('image::route'),
+							 Config::get('image.cache.lifetime'),
+							 Config::get('image.route'),
 							 $cacher);
 		});
 
@@ -89,7 +95,7 @@ class ImageServiceProvider extends ServiceProvider {
 		$this->app['command.kevbaldwyn.image.moveasset'] = $this->app->share(function($app) {
 			return new MoveAssetCommand();
 		});
-				
+
 		$this->commands('command.kevbaldwyn.image.moveasset');
 	}
 

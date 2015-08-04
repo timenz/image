@@ -1,6 +1,7 @@
 <?php
 
-$route = rtrim(\Config::get('image::route'), '/');
+$route = rtrim(Config::get('image.route'), '/');
+// dd($route);
 Route::get($route, function() {
-	App::make('kevbaldwyn.image')->serve();
+	$this->app->make('kevbaldwyn.image')->serve();
 });

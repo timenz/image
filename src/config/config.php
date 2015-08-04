@@ -10,7 +10,7 @@ return array(
 	'route' => '/_img',
 
 	/**
-	 * note this is the server path to the file 
+	 * note this is the server path to the file
 	 * from base_path()
 	 */
 	'js_path' => '/public/js/Imagecow.js',
@@ -28,5 +28,5 @@ return array(
 		'lifetime' => 1,
 		'path'     => 'images' // /app/storage/cache/{images}
 	)
- 
+
 );

@@ -17,17 +17,17 @@ class Provider implements ProviderInterface {
 
 	public function getVarResponsiveFlag()
 	{
-		return Config::get('image::vars.responsive_flag');
+		return Config::get('image.vars.responsive_flag');
 	}
 
 	public function getVarImage()
 	{
-		return Config::get('image::vars.image');
+		return Config::get('image.vars.image');
 	}
 
 	public function getVarTransform()
 	{
-		return Config::get('image::vars.transform');
+		return Config::get('image.vars.transform');
 	}
 
 	public function getQueryStringData($key)
@@ -37,12 +37,12 @@ class Provider implements ProviderInterface {
 
 	public function getJsPath()
 	{
-		return Config::get('image::js_path');
+		return Config::get('image.js_path');
 	}
 
 	public function getWorkerName()
 	{
-		return Config::get('image::worker');
+		return Config::get('image.worker');
 	}
 
 	public function basePath()
@@ -73,7 +73,7 @@ class Provider implements ProviderInterface {
 	 */
 	public function fireEvent($name, array $args)
 	{
-		Event::fire($name, $args);
+		event($name, $args);
 	}
 
 }
