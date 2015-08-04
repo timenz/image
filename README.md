@@ -39,9 +39,11 @@ Install as any other Laravel 4 package:
 
 5) Publish the package config file to change the defaults:
 
-    $ php artisan config:publish kevbaldwyn/image
+    $ php artisan vendor:publish marcha/image
 
 6) Copy the /vendor/imagecow/imagecow/Imagecow/Imagecow.js file to a publicly accessible web directory. The default path is set as /public/js/Imagecow.js, but whatever it is set as in the config the file must exist.
+
+7) Create folder storage/cache/images
 
 ## Usage
 ### Standard
