@@ -1,11 +1,13 @@
 {
-    "name": "kevbaldwyn/image",
+    "name": "marcha/image",
     "description": "A Laravel 4 package to aid generating automatically resized images on the fly and generating responsive images.",
-    "keywords":["laravel", "laravel 4", "imagecow", "image", "responsive", "resize"],
+    "keywords":["laravel 5.1", "laravel", "laravel 4", "imagecow", "image", "responsive", "resize"],
     "authors": [
         {
             "name": "Kevin Baldwyn",
-            "email": "kevin@purepixel.co.uk"
+            "email": "kevin@purepixel.co.uk",
+            "name" : "Nikola Janković",
+            "email": "nikola@mojasoba.com",
         }
     ],
     "require": {
