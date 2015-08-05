@@ -162,6 +162,9 @@ class Image {
 				case 'gif' :
 					$type = 'image/gif';
 					break;
+				case 'bmp' :
+					$type = 'image/bmp';
+					break;
 			}
 		}
 		return $type;
