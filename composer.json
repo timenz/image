@@ -1,5 +1,5 @@
 {
-    "name": "marcha/image",
+    "name": "timenz/image",
     "description": "A forked Laravel 4 to 5.1. package to aid generating automatically resized images on the fly and generating responsive images.",
     "keywords":["laravel 5.1", "laravel", "laravel 4", "imagecow", "image", "responsive", "resize"],
     "authors": [
@@ -14,8 +14,7 @@
     ],
     "require": {
         "php": ">=5.3.0",
-
-        "marcha/imagecow": "dev-master",
+        "imagecow/imagecow": "dev-master",
         "aws/aws-sdk-php": "2.x"
     },
     "require-dev" : {
