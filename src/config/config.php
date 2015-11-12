@@ -13,7 +13,7 @@ return array(
 	 * note this is the server path to the file
 	 * from base_path()
 	 */
-	'js_path' => '/public/js/Imagecow.js',
+	'js_path' => '/public/assets/js/Imagecow.js',
 
 	/**
 	 * various $_GET variables
